@@ -392,7 +392,9 @@ module.exports = function(webpackEnv) {
               test: cssRegex,
               exclude: cssModuleRegex,
               use: getStyleLoaders({
+                modules:true,
                 importLoaders: 1,
+                localIdentName:'[name]__[local]__[hash:base64:5]',
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
