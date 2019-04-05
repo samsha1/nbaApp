@@ -1,12 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {BASE_URL} from '../../../config';
 import styles from './videosList.css';
 import CardInfo from '../CardInfo/card_info';
 
 const VideoListTemplate = (props) => {
 	return props.videos.map( (item,i) => {
-		return	<Link to= {`${BASE_URL}/videos/${item.id}`} key={i}>
+		return	<Link to= {`/videos/${item.id}`} key={i}>
 						<div className={styles.videoListItem_wrapper}>
 							<div className={styles.left}
 
